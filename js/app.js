@@ -15,6 +15,10 @@ const CATEGORY_SUB_LABELS = {
   B: 'PROMOTION',
   C: 'BEST SELLER',
   D: 'NEW',
+  E: 'BUY 1 GET 1',
+  F: 'BULK PACK',
+  G: 'PAIR DEAL',
+  H: 'ONE PRICE',
 };
 
 // Sensible starting values so the preview is never blank
@@ -196,6 +200,7 @@ const CATEGORY_ICONS = {
   C: '<svg class="pick-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"></polygon></svg>',
   D: '<svg class="pick-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M18.4 5.6l-2.8 2.8M8.4 15.6l-2.8 2.8"></path></svg>',
 };
+const DEFAULT_CATEGORY_ICON = '<svg class="pick-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 12h8M12 8v8"></path></svg>';
 const SIZE_ICONS = {
   '01': '<svg class="pick-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="10" height="18" rx="1.5"></rect></svg>',
   '02': '<svg class="pick-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="10" rx="1.5"></rect></svg>',
@@ -209,7 +214,7 @@ function renderCategoryPicker() {
   listCategories().forEach((c) => {
     const card = document.createElement('div');
     card.className = 'pick-card' + (state.category === c.code ? ' active' : '');
-    const icon = CATEGORY_ICONS[c.code] || '';
+    const icon = CATEGORY_ICONS[c.code] || DEFAULT_CATEGORY_ICON;
     card.innerHTML = icon + c.label + (c.sub ? `<small>${c.sub}</small>` : '');
     card.onclick = () => { state.category = c.code; ensureValidSize(); onTemplateChange(); };
     el.appendChild(card);
@@ -244,8 +249,15 @@ function ensureValidSize() {
   }
 }
 
-function currentTemplateId() { return `${state.category}-${state.size}`; }
-function currentTemplate() { return TEMPLATES[currentTemplateId()]; }
+// Look the template up by category + sizeCode (not by building an id string),
+// so ids/sizeCodes don't have to follow the "<cat>-<size>" naming pattern.
+function currentTemplate() {
+  return Object.values(TEMPLATES).find(t => t.category === state.category && t.sizeCode === state.size);
+}
+function currentTemplateId() {
+  const t = currentTemplate();
+  return t ? t.id : `${state.category}-${state.size}`;
+}
 
 /* ---------------------------- form ---------------------------- */
 
@@ -310,6 +322,14 @@ function buildForm() {
     if (state.data[role] === undefined) state.data[role] = sample;
     form.appendChild(makeTextRow(role, `${role} (ฟิลด์ใหม่จากเทมเพลต)`, state.data[role]));
   });
+
+  // Print-only designs (e.g. shelf talkers) have no fillable fields.
+  if (!form.children.length) {
+    const note = document.createElement('div');
+    note.className = 'static-note';
+    note.textContent = 'ป้ายแบบนี้เป็นงานพร้อมพิมพ์ ไม่มีช่องให้กรอก — กด "พิมพ์ป้ายนี้ทันที" หรือเพิ่มลงคิวได้เลย (1 แผ่น A4 ได้ 2 ใบ)';
+    form.appendChild(note);
+  }
 }
 
 function makeBareInput(key, placeholder, value, type = 'text') {
