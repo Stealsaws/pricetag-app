@@ -365,49 +365,34 @@
     "units": [
       {
         "background": "assets/bg/B-01.jpeg",
-        "bg_x_mm": 0.0,
-        "bg_y_mm": -13.17,
+        "bg_x_mm": 0.02,
+        "bg_y_mm": -1.08,
         "bg_w_mm": 296.99,
         "bg_h_mm": 420.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 0,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
         "fields": [
           {
-            "role": "dateRange",
-            "x_mm": 78.53,
-            "y_mm": 365.41,
-            "w_mm": 178.86,
-            "h_mm": 13.55,
-            "fontSizePt": 20.0,
-            "color": "#FFFF00",
-            "bold": false,
-            "align": "right",
-            "sampleText": "วันที่ 00/00/00 – 00/00/00",
-            "lines": [
-              "วันที่ 00/00/00 – 00/00/00"
-            ]
-          },
-          {
-            "role": "oldPrice",
-            "x_mm": 78.95,
-            "y_mm": 325.75,
-            "w_mm": 178.86,
-            "h_mm": 29.21,
-            "fontSizePt": 45.0,
+            "role": "productName",
+            "x_mm": 106.96,
+            "y_mm": 176.59,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
             "color": "#000000",
-            "bold": false,
+            "bold": true,
             "align": "right",
-            "sampleText": "ราคาปกติ 299.00 บาท",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
             "lines": [
-              "ราคาปกติ 299.00 บาท"
+              "ซันไลต์ เลมอน เทอร์โบ"
             ]
           },
           {
             "role": "description",
-            "x_mm": 78.95,
-            "y_mm": 170.39,
-            "w_mm": 178.86,
-            "h_mm": 46.57,
+            "x_mm": 106.97,
+            "y_mm": 195.6,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
             "fontSizePt": 40.0,
             "color": "#000000",
             "bold": false,
@@ -419,33 +404,48 @@
             ]
           },
           {
-            "role": "productName",
-            "x_mm": 78.95,
-            "y_mm": 150.92,
-            "w_mm": 178.86,
-            "h_mm": 26.88,
-            "fontSizePt": 52.0,
-            "color": "#000000",
-            "bold": true,
-            "align": "right",
-            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
-            "lines": [
-              "ซันไลต์ เลมอน เทอร์โบ"
-            ]
-          },
-          {
             "role": "price",
-            "x_mm": 10.37,
-            "y_mm": 211.03,
-            "w_mm": 226.06,
-            "h_mm": 106.26,
+            "x_mm": 12.98,
+            "y_mm": 198.58,
+            "w_mm": 220.98,
+            "h_mm": 133.35,
             "fontSizePt": 350.0,
-            "color": "#EE0000",
+            "color": "#FFFFFF",
             "bold": true,
             "align": "right",
             "sampleText": "199",
             "lines": [
               "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 106.97,
+            "y_mm": 351.16,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 106.53,
+            "y_mm": 389.84,
+            "w_mm": 173.78,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
             ]
           }
         ],
@@ -453,19 +453,19 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 245,
-            "y_mm": 282,
-            "w_mm": 33,
-            "h_mm": 16,
-            "color": "#EE0000"
+            "x_mm": 244.69,
+            "y_mm": 282.73,
+            "w_mm": 35.98,
+            "h_mm": 16.32,
+            "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 237,
-            "y_mm": 315,
-            "w_mm": 26,
-            "h_mm": 24,
-            "color": "#EE0000"
+            "x_mm": 236.64,
+            "y_mm": 315.12,
+            "w_mm": 17.37,
+            "h_mm": 17.37,
+            "color": "#FFFFFF"
           }
         ]
       }
@@ -484,63 +484,33 @@
       {
         "background": "assets/bg/B-02.jpeg",
         "bg_x_mm": 0.0,
-        "bg_y_mm": -12.42,
+        "bg_y_mm": 0.07,
         "bg_w_mm": 420.0,
         "bg_h_mm": 296.99,
-        "offset_x_mm": 0,
-        "offset_y_mm": 0,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
         "fields": [
           {
-            "role": "price",
-            "x_mm": 31.75,
-            "y_mm": 105.61,
-            "w_mm": 307.2,
-            "h_mm": 140.48,
-            "fontSizePt": 460.0,
-            "color": "#EE0000",
+            "role": "productName",
+            "x_mm": 230.85,
+            "y_mm": 61.08,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#000000",
             "bold": true,
             "align": "right",
-            "sampleText": "199",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
             "lines": [
-              "199"
-            ]
-          },
-          {
-            "role": "dateRange",
-            "x_mm": 51.79,
-            "y_mm": 270.58,
-            "w_mm": 116.42,
-            "h_mm": 13.55,
-            "fontSizePt": 20.0,
-            "color": "#FFFF00",
-            "bold": false,
-            "align": "left",
-            "sampleText": "วันที่ 00/00/00 – 00/00/00",
-            "lines": [
-              "วันที่ 00/00/00 – 00/00/00"
-            ]
-          },
-          {
-            "role": "oldPrice",
-            "x_mm": 223.61,
-            "y_mm": 260.58,
-            "w_mm": 178.86,
-            "h_mm": 29.21,
-            "fontSizePt": 45.0,
-            "color": "#000000",
-            "bold": false,
-            "align": "right",
-            "sampleText": "ราคาปกติ 299.00 บาท",
-            "lines": [
-              "ราคาปกติ 299.00 บาท"
+              "ซันไลต์ เลมอน เทอร์โบ"
             ]
           },
           {
             "role": "description",
-            "x_mm": 223.24,
-            "y_mm": 78.67,
-            "w_mm": 178.86,
-            "h_mm": 46.57,
+            "x_mm": 230.86,
+            "y_mm": 81.49,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
             "fontSizePt": 40.0,
             "color": "#000000",
             "bold": false,
@@ -552,18 +522,48 @@
             ]
           },
           {
-            "role": "productName",
-            "x_mm": 223.24,
-            "y_mm": 57.78,
-            "w_mm": 178.86,
-            "h_mm": 26.88,
-            "fontSizePt": 52.0,
-            "color": "#000000",
+            "role": "price",
+            "x_mm": 34.36,
+            "y_mm": 68.81,
+            "w_mm": 302.12,
+            "h_mm": 175.26,
+            "fontSizePt": 460.0,
+            "color": "#FFFFFF",
             "bold": true,
             "align": "right",
-            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "sampleText": "199",
             "lines": [
-              "ซันไลต์ เลมอน เทอร์โบ"
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 231.23,
+            "y_mm": 263.6,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 59.37,
+            "y_mm": 272.63,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
             ]
           }
         ],
@@ -571,18 +571,18 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 352,
-            "y_mm": 179,
-            "w_mm": 52,
-            "h_mm": 24,
-            "color": "#EE0000"
+            "x_mm": 352.55,
+            "y_mm": 179.65,
+            "w_mm": 52.07,
+            "h_mm": 23.6,
+            "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 339,
-            "y_mm": 219,
-            "w_mm": 25,
-            "h_mm": 25,
+            "x_mm": 339.37,
+            "y_mm": 219.43,
+            "w_mm": 25.14,
+            "h_mm": 25.14,
             "color": "#EE0000"
           }
         ]
@@ -602,87 +602,86 @@
       {
         "background": "assets/bg/B-03.jpeg",
         "bg_x_mm": 0.0,
-        "bg_y_mm": -12.4,
-        "bg_w_mm": 297.05,
-        "bg_h_mm": 210.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 0,
+        "bg_y_mm": 0.09,
+        "bg_w_mm": 297.06,
+        "bg_h_mm": 210.01,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 130.33,
-            "y_mm": 25.4,
-            "w_mm": 155.57,
-            "h_mm": 94.19,
+            "x_mm": 112.82,
+            "y_mm": 42.72,
+            "w_mm": 173.78,
+            "h_mm": 13.72,
             "fontSizePt": 36.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
-            "sampleText": "ดาวกระจาย ถุงขยะแบบหนาพิเศษ",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
             "lines": [
-              "ดาวกระจาย ",
-              "ถุงขยะแบบหนาพิเศษ"
+              "ซันไลต์ เลมอน เทอร์โบ"
             ]
           },
           {
             "role": "description",
-            "x_mm": 164.5,
-            "y_mm": 66.15,
-            "w_mm": 120.12,
-            "h_mm": 40.48,
-            "fontSizePt": 24.0,
+            "x_mm": 112.83,
+            "y_mm": 58.45,
+            "w_mm": 173.78,
+            "h_mm": 21.34,
+            "fontSizePt": 28.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
-            "sampleText": "ถุงขยะ แบบแพ็ค (ดำ) ขนาด 28x36 นิ้ว (1 Kg)",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
             "lines": [
-              "ถุงขยะ แบบแพ็ค (ดำ) ",
-              "ขนาด 28x36 นิ้ว (1 Kg)"
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
             ]
           },
           {
             "role": "price",
-            "x_mm": 48.38,
-            "y_mm": 78.65,
-            "w_mm": 197.49,
-            "h_mm": 93.4,
+            "x_mm": 56.0,
+            "y_mm": 69.82,
+            "w_mm": 192.4,
+            "h_mm": 91.44,
             "fontSizePt": 240.0,
-            "color": "#EE0000",
+            "color": "#FFFFFF",
             "bold": true,
             "align": "right",
-            "sampleText": "50",
+            "sampleText": "199",
             "lines": [
-              "50"
-            ]
-          },
-          {
-            "role": "dateRange",
-            "x_mm": 168.17,
-            "y_mm": 188.38,
-            "w_mm": 116.42,
-            "h_mm": 13.55,
-            "fontSizePt": 20.0,
-            "color": "#FFFF00",
-            "bold": false,
-            "align": "right",
-            "sampleText": "วันที่ 01/09/69 – 31/10/69",
-            "lines": [
-              "วันที่ 01/09/69 – 31/10/69"
+              "199"
             ]
           },
           {
             "role": "oldPrice",
-            "x_mm": 152.68,
-            "y_mm": 165.45,
-            "w_mm": 131.94,
-            "h_mm": 19.12,
+            "x_mm": 160.31,
+            "y_mm": 167.89,
+            "w_mm": 126.86,
+            "h_mm": 11.43,
             "fontSizePt": 30.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
-            "sampleText": "ราคาปกติ 55.00 บาท",
+            "sampleText": "ราคาปกติ 299.00 บาท",
             "lines": [
-              "ราคาปกติ 55.00 บาท"
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 175.78,
+            "y_mm": 190.43,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
             ]
           }
         ],
@@ -690,19 +689,19 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 255,
-            "y_mm": 118,
-            "w_mm": 33,
-            "h_mm": 17,
-            "color": "#EE0000"
+            "x_mm": 257.44,
+            "y_mm": 124.78,
+            "w_mm": 29.85,
+            "h_mm": 13.53,
+            "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 253,
-            "y_mm": 142,
-            "w_mm": 25,
-            "h_mm": 17,
-            "color": "#EE0000"
+            "x_mm": 250.77,
+            "y_mm": 146.26,
+            "w_mm": 14.41,
+            "h_mm": 14.41,
+            "color": "#FFFFFF"
           }
         ]
       }
@@ -1402,20 +1401,20 @@
     "units": [
       {
         "background": "assets/bg/A-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 30.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 30.0,
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -1426,11 +1425,11 @@
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 13.3,
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -1442,11 +1441,11 @@
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 48,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 78,
+            "x_mm": 64.88,
+            "y_mm": 14.2,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
             "color": "#EE0000",
             "bold": true,
             "align": "right",
@@ -1456,27 +1455,12 @@
             ]
           },
           {
-            "role": "dateRange",
-            "x_mm": 22,
-            "y_mm": 87,
-            "w_mm": 73,
-            "h_mm": 7,
-            "fontSizePt": 9.5,
-            "color": "#FFFF00",
-            "bold": false,
-            "align": "right",
-            "sampleText": "วันที่ 00/00/00 – 00/00/00",
-            "lines": [
-              "วันที่ 00/00/00 – 00/00/00"
-            ]
-          },
-          {
             "role": "oldPrice",
-            "x_mm": 145,
-            "y_mm": 87,
-            "w_mm": 55,
-            "h_mm": 7,
-            "fontSizePt": 14.3,
+            "x_mm": 109.06,
+            "y_mm": 82.53,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -1484,44 +1468,59 @@
             "lines": [
               "ราคาปกติ 299.00 บาท"
             ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 24.64,
+            "y_mm": 84.08,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
           }
         ],
         "statics": [],
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 180,
-            "y_mm": 55,
-            "w_mm": 20,
-            "h_mm": 8,
+            "x_mm": 184.5,
+            "y_mm": 55.03,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
             "color": "#EE0000"
           },
           {
             "shape": "ellipse",
-            "x_mm": 182,
-            "y_mm": 67,
-            "w_mm": 10,
-            "h_mm": 10,
+            "x_mm": 181.45,
+            "y_mm": 69.2,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
             "color": "#EE0000"
           }
         ]
       },
       {
         "background": "assets/bg/A-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 180.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 180.0,
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.23,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.23,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 97.09,
+            "y_mm": 12.14,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -1532,11 +1531,11 @@
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 13.3,
+            "x_mm": 97.72,
+            "y_mm": 21.09,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -1548,11 +1547,11 @@
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 48,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 78,
+            "x_mm": 65.32,
+            "y_mm": 13.93,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
             "color": "#EE0000",
             "bold": true,
             "align": "right",
@@ -1562,27 +1561,12 @@
             ]
           },
           {
-            "role": "dateRange",
-            "x_mm": 22,
-            "y_mm": 87,
-            "w_mm": 73,
-            "h_mm": 7,
-            "fontSizePt": 9.5,
-            "color": "#FFFF00",
-            "bold": false,
-            "align": "right",
-            "sampleText": "วันที่ 00/00/00 – 00/00/00",
-            "lines": [
-              "วันที่ 00/00/00 – 00/00/00"
-            ]
-          },
-          {
             "role": "oldPrice",
-            "x_mm": 145,
-            "y_mm": 87,
-            "w_mm": 55,
-            "h_mm": 7,
-            "fontSizePt": 14.3,
+            "x_mm": 109.5,
+            "y_mm": 82.26,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -1590,30 +1574,44 @@
             "lines": [
               "ราคาปกติ 299.00 บาท"
             ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 25.08,
+            "y_mm": 83.81,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
           }
         ],
         "statics": [],
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 180,
-            "y_mm": 55,
-            "w_mm": 20,
-            "h_mm": 8,
+            "x_mm": 184.94,
+            "y_mm": 42.28,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
             "color": "#EE0000"
           },
           {
             "shape": "ellipse",
-            "x_mm": 182,
-            "y_mm": 67,
-            "w_mm": 10,
-            "h_mm": 10,
+            "x_mm": 181.89,
+            "y_mm": 56.44,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
             "color": "#EE0000"
           }
         ]
       }
-    ],
-    "measuredFromRender": true
+    ]
   },
   "B-04": {
     "id": "B-04",
@@ -1627,88 +1625,87 @@
     "units": [
       {
         "background": "assets/bg/B-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 30.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 30.0,
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
-            "sampleText": "ดาวกระจาย ถุงขยะแบบหนาพิเศษ",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
             "lines": [
-              "ดาวกระจาย ",
-              "ถุงขยะแบบหนาพิเศษ"
+              "ซันไลต์ เลมอน เทอร์โบ"
             ]
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 11.4,
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
-            "sampleText": "ถุงขยะ แบบแพ็ค (ดำ) ขนาด 28x36 นิ้ว (1 Kg)",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
             "lines": [
-              "ถุงขยะ แบบแพ็ค (ดำ) ",
-              "ขนาด 28x36 นิ้ว (1 Kg)"
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
             ]
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 48,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 78,
-            "color": "#EE0000",
+            "x_mm": 64.88,
+            "y_mm": 14.2,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFFFF",
             "bold": true,
             "align": "right",
-            "sampleText": "50",
+            "sampleText": "199",
             "lines": [
-              "50"
-            ]
-          },
-          {
-            "role": "dateRange",
-            "x_mm": 22,
-            "y_mm": 87,
-            "w_mm": 73,
-            "h_mm": 7,
-            "fontSizePt": 9.5,
-            "color": "#FFFF00",
-            "bold": false,
-            "align": "right",
-            "sampleText": "วันที่ 01/09/69 – 31/10/69",
-            "lines": [
-              "วันที่ 01/09/69 – 31/10/69"
+              "199"
             ]
           },
           {
             "role": "oldPrice",
-            "x_mm": 145,
-            "y_mm": 87,
-            "w_mm": 55,
-            "h_mm": 7,
-            "fontSizePt": 14.3,
+            "x_mm": 109.06,
+            "y_mm": 82.53,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
-            "sampleText": "ราคาปกติ 55.00 บาท",
+            "sampleText": "ราคาปกติ 299.00 บาท",
             "lines": [
-              "ราคาปกติ 55.00 บาท"
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 24.64,
+            "y_mm": 84.08,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
             ]
           }
         ],
@@ -1716,106 +1713,105 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 180,
-            "y_mm": 55,
-            "w_mm": 20,
-            "h_mm": 8,
-            "color": "#EE0000"
+            "x_mm": 184.5,
+            "y_mm": 55.03,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 182,
-            "y_mm": 67,
-            "w_mm": 10,
-            "h_mm": 10,
-            "color": "#EE0000"
+            "x_mm": 181.45,
+            "y_mm": 69.2,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFFFF"
           }
         ]
       },
       {
         "background": "assets/bg/B-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 180.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 180.0,
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.02,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.02,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 97.09,
+            "y_mm": 12.35,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
-            "sampleText": "ดาวกระจาย ถุงขยะแบบหนาพิเศษ",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
             "lines": [
-              "ดาวกระจาย ",
-              "ถุงขยะแบบหนาพิเศษ"
+              "ซันไลต์ เลมอน เทอร์โบ"
             ]
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 11.4,
+            "x_mm": 97.72,
+            "y_mm": 21.3,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
-            "sampleText": "ถุงขยะ แบบแพ็ค (ดำ) ขนาด 28x36 นิ้ว (1 Kg)",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
             "lines": [
-              "ถุงขยะ แบบแพ็ค (ดำ) ",
-              "ขนาด 28x36 นิ้ว (1 Kg)"
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
             ]
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 48,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 78,
-            "color": "#EE0000",
+            "x_mm": 65.32,
+            "y_mm": 14.15,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFFFF",
             "bold": true,
             "align": "right",
-            "sampleText": "50",
+            "sampleText": "199",
             "lines": [
-              "50"
-            ]
-          },
-          {
-            "role": "dateRange",
-            "x_mm": 22,
-            "y_mm": 87,
-            "w_mm": 73,
-            "h_mm": 7,
-            "fontSizePt": 9.5,
-            "color": "#FFFF00",
-            "bold": false,
-            "align": "right",
-            "sampleText": "วันที่ 01/09/69 – 31/10/69",
-            "lines": [
-              "วันที่ 01/09/69 – 31/10/69"
+              "199"
             ]
           },
           {
             "role": "oldPrice",
-            "x_mm": 145,
-            "y_mm": 87,
-            "w_mm": 55,
-            "h_mm": 7,
-            "fontSizePt": 14.3,
+            "x_mm": 109.5,
+            "y_mm": 82.48,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
-            "sampleText": "ราคาปกติ 55.00 บาท",
+            "sampleText": "ราคาปกติ 299.00 บาท",
             "lines": [
-              "ราคาปกติ 55.00 บาท"
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 25.08,
+            "y_mm": 84.02,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
             ]
           }
         ],
@@ -1823,24 +1819,23 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 180,
-            "y_mm": 55,
-            "w_mm": 20,
-            "h_mm": 8,
-            "color": "#EE0000"
+            "x_mm": 184.94,
+            "y_mm": 42.49,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 182,
-            "y_mm": 67,
-            "w_mm": 10,
-            "h_mm": 10,
-            "color": "#EE0000"
+            "x_mm": 181.89,
+            "y_mm": 56.66,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFFFF"
           }
         ]
       }
-    ],
-    "measuredFromRender": true
+    ]
   },
   "C-04": {
     "id": "C-04",
@@ -1854,20 +1849,20 @@
     "units": [
       {
         "background": "assets/bg/C-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 30.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 30.0,
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -1878,11 +1873,11 @@
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 13.3,
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -1894,11 +1889,11 @@
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 58,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 68,
+            "x_mm": 55.15,
+            "y_mm": 19.98,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
             "color": "#FFFFFF",
             "bold": true,
             "align": "right",
@@ -1909,11 +1904,11 @@
           },
           {
             "role": "disclaimer",
-            "x_mm": 95,
-            "y_mm": 92,
-            "w_mm": 105,
-            "h_mm": 7,
-            "fontSizePt": 8.6,
+            "x_mm": 92.9,
+            "y_mm": 92.14,
+            "w_mm": 93.2,
+            "h_mm": 4.19,
+            "fontSizePt": 11.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -1926,11 +1921,11 @@
         "statics": [
           {
             "role": "static",
-            "x_mm": 108,
-            "y_mm": 48,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 19.0,
+            "x_mm": 182.02,
+            "y_mm": 39.3,
+            "w_mm": 20.11,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -1943,38 +1938,38 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 161,
-            "y_mm": 65,
-            "w_mm": 20,
-            "h_mm": 9,
+            "x_mm": 177.64,
+            "y_mm": 61.67,
+            "w_mm": 21.59,
+            "h_mm": 8.38,
             "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 164,
-            "y_mm": 78,
-            "w_mm": 11,
-            "h_mm": 10,
+            "x_mm": 174.11,
+            "y_mm": 75.97,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
             "color": "#FFFFFF"
           }
         ]
       },
       {
         "background": "assets/bg/C-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 180.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 180.0,
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.23,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.23,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 96.35,
+            "y_mm": 12.08,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -1985,11 +1980,11 @@
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 13.3,
+            "x_mm": 96.96,
+            "y_mm": 21.04,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -2001,11 +1996,11 @@
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 58,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 68,
+            "x_mm": 54.83,
+            "y_mm": 19.67,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
             "color": "#FFFFFF",
             "bold": true,
             "align": "right",
@@ -2016,11 +2011,11 @@
           },
           {
             "role": "disclaimer",
-            "x_mm": 95,
-            "y_mm": 92,
-            "w_mm": 105,
-            "h_mm": 7,
-            "fontSizePt": 8.6,
+            "x_mm": 92.58,
+            "y_mm": 91.82,
+            "w_mm": 93.2,
+            "h_mm": 4.19,
+            "fontSizePt": 11.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -2033,11 +2028,11 @@
         "statics": [
           {
             "role": "static",
-            "x_mm": 108,
-            "y_mm": 48,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 19.0,
+            "x_mm": 181.7,
+            "y_mm": 38.98,
+            "w_mm": 20.11,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -2050,24 +2045,23 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 161,
-            "y_mm": 65,
-            "w_mm": 20,
-            "h_mm": 9,
+            "x_mm": 177.32,
+            "y_mm": 48.72,
+            "w_mm": 21.59,
+            "h_mm": 8.38,
             "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 164,
-            "y_mm": 78,
-            "w_mm": 11,
-            "h_mm": 10,
+            "x_mm": 173.8,
+            "y_mm": 63.02,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
             "color": "#FFFFFF"
           }
         ]
       }
-    ],
-    "measuredFromRender": true
+    ]
   },
   "D-04": {
     "id": "D-04",
@@ -2081,20 +2075,20 @@
     "units": [
       {
         "background": "assets/bg/D-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 30.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 30.0,
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -2105,11 +2099,11 @@
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 13.3,
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -2121,11 +2115,11 @@
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 58,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 68,
+            "x_mm": 55.15,
+            "y_mm": 19.98,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
             "color": "#FFFFFF",
             "bold": true,
             "align": "right",
@@ -2136,11 +2130,11 @@
           },
           {
             "role": "disclaimer",
-            "x_mm": 95,
-            "y_mm": 92,
-            "w_mm": 105,
-            "h_mm": 7,
-            "fontSizePt": 8.6,
+            "x_mm": 92.9,
+            "y_mm": 92.14,
+            "w_mm": 93.2,
+            "h_mm": 4.19,
+            "fontSizePt": 11.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -2153,11 +2147,11 @@
         "statics": [
           {
             "role": "static",
-            "x_mm": 108,
-            "y_mm": 48,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 19.0,
+            "x_mm": 182.02,
+            "y_mm": 39.3,
+            "w_mm": 20.11,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -2170,38 +2164,38 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 161,
-            "y_mm": 65,
-            "w_mm": 20,
-            "h_mm": 9,
+            "x_mm": 177.64,
+            "y_mm": 61.67,
+            "w_mm": 21.59,
+            "h_mm": 8.38,
             "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 164,
-            "y_mm": 78,
-            "w_mm": 11,
-            "h_mm": 10,
+            "x_mm": 174.11,
+            "y_mm": 75.97,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
             "color": "#FFFFFF"
           }
         ]
       },
       {
         "background": "assets/bg/D-04.jpg",
-        "bg_x_mm": 0,
-        "bg_y_mm": 180.0,
-        "bg_w_mm": 210.0,
-        "bg_h_mm": 100.0,
-        "offset_x_mm": 0,
-        "offset_y_mm": 180.0,
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.23,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.23,
         "fields": [
           {
             "role": "productName",
-            "x_mm": 108,
-            "y_mm": 18,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 17.1,
+            "x_mm": 96.35,
+            "y_mm": 12.08,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -2212,11 +2206,11 @@
           },
           {
             "role": "description",
-            "x_mm": 108,
-            "y_mm": 28,
-            "w_mm": 92,
-            "h_mm": 17,
-            "fontSizePt": 13.3,
+            "x_mm": 96.96,
+            "y_mm": 21.04,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -2228,11 +2222,11 @@
           },
           {
             "role": "price",
-            "x_mm": 65,
-            "y_mm": 58,
-            "w_mm": 100,
-            "h_mm": 34,
-            "fontSizePt": 68,
+            "x_mm": 54.83,
+            "y_mm": 19.67,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
             "color": "#FFFFFF",
             "bold": true,
             "align": "right",
@@ -2243,11 +2237,11 @@
           },
           {
             "role": "disclaimer",
-            "x_mm": 95,
-            "y_mm": 92,
-            "w_mm": 105,
-            "h_mm": 7,
-            "fontSizePt": 8.6,
+            "x_mm": 92.58,
+            "y_mm": 91.82,
+            "w_mm": 93.2,
+            "h_mm": 4.19,
+            "fontSizePt": 11.0,
             "color": "#000000",
             "bold": false,
             "align": "right",
@@ -2260,11 +2254,11 @@
         "statics": [
           {
             "role": "static",
-            "x_mm": 108,
-            "y_mm": 48,
-            "w_mm": 92,
-            "h_mm": 10,
-            "fontSizePt": 19.0,
+            "x_mm": 181.7,
+            "y_mm": 38.98,
+            "w_mm": 20.11,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
             "color": "#000000",
             "bold": true,
             "align": "right",
@@ -2277,23 +2271,2526 @@
         "decorations": [
           {
             "shape": "roundRect",
-            "x_mm": 161,
-            "y_mm": 65,
-            "w_mm": 20,
-            "h_mm": 9,
+            "x_mm": 177.32,
+            "y_mm": 48.72,
+            "w_mm": 21.59,
+            "h_mm": 8.38,
             "color": "#FFFFFF"
           },
           {
             "shape": "ellipse",
-            "x_mm": 164,
-            "y_mm": 78,
-            "w_mm": 11,
-            "h_mm": 10,
+            "x_mm": 173.8,
+            "y_mm": 63.02,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
             "color": "#FFFFFF"
           }
         ]
       }
-    ],
-    "measuredFromRender": true
+    ]
+  },
+  "E-01": {
+    "id": "E-01",
+    "category": "E",
+    "categoryLabel": "1 ซื้อ 1 แถม 1",
+    "sizeCode": "01",
+    "sizeLabel": "A3 ตั้ง",
+    "page_w_mm": 297.0,
+    "page_h_mm": 420.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/E-01.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": -0.69,
+        "bg_w_mm": 296.99,
+        "bg_h_mm": 420.0,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 106.96,
+            "y_mm": 176.59,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 106.97,
+            "y_mm": 195.6,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 12.98,
+            "y_mm": 198.58,
+            "w_mm": 220.98,
+            "h_mm": 133.35,
+            "fontSizePt": 350.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 106.97,
+            "y_mm": 351.16,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 106.53,
+            "y_mm": 389.84,
+            "w_mm": 173.78,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 244.69,
+            "y_mm": 282.73,
+            "w_mm": 35.98,
+            "h_mm": 16.32,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 236.64,
+            "y_mm": 315.12,
+            "w_mm": 17.37,
+            "h_mm": 17.37,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "E-02": {
+    "id": "E-02",
+    "category": "E",
+    "categoryLabel": "1 ซื้อ 1 แถม 1",
+    "sizeCode": "02",
+    "sizeLabel": "A3 นอน",
+    "page_w_mm": 420.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/E-02.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.07,
+        "bg_w_mm": 420.0,
+        "bg_h_mm": 296.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 230.85,
+            "y_mm": 61.08,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 230.86,
+            "y_mm": 81.49,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 34.36,
+            "y_mm": 68.81,
+            "w_mm": 302.12,
+            "h_mm": 175.26,
+            "fontSizePt": 460.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 231.23,
+            "y_mm": 263.6,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 59.37,
+            "y_mm": 272.63,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 352.55,
+            "y_mm": 179.65,
+            "w_mm": 52.07,
+            "h_mm": 23.6,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 339.37,
+            "y_mm": 219.43,
+            "w_mm": 25.14,
+            "h_mm": 25.14,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "E-03": {
+    "id": "E-03",
+    "category": "E",
+    "categoryLabel": "1 ซื้อ 1 แถม 1",
+    "sizeCode": "03",
+    "sizeLabel": "A4 นอน",
+    "page_w_mm": 297.0,
+    "page_h_mm": 210.01,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/E-03.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.09,
+        "bg_w_mm": 297.06,
+        "bg_h_mm": 210.01,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 112.82,
+            "y_mm": 42.72,
+            "w_mm": 173.78,
+            "h_mm": 13.72,
+            "fontSizePt": 36.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 112.83,
+            "y_mm": 58.45,
+            "w_mm": 173.78,
+            "h_mm": 21.34,
+            "fontSizePt": 28.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 56.0,
+            "y_mm": 69.82,
+            "w_mm": 192.4,
+            "h_mm": 91.44,
+            "fontSizePt": 240.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 160.31,
+            "y_mm": 167.89,
+            "w_mm": 126.86,
+            "h_mm": 11.43,
+            "fontSizePt": 30.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 175.78,
+            "y_mm": 190.43,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 257.44,
+            "y_mm": 124.78,
+            "w_mm": 29.85,
+            "h_mm": 13.53,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 250.77,
+            "y_mm": 146.26,
+            "w_mm": 14.41,
+            "h_mm": 14.41,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "E-04": {
+    "id": "E-04",
+    "category": "E",
+    "categoryLabel": "1 ซื้อ 1 แถม 1",
+    "sizeCode": "04",
+    "sizeLabel": "A5 นอน (2 ใบ/แผ่น)",
+    "page_w_mm": 210.01,
+    "page_h_mm": 297.0,
+    "isPair": true,
+    "units": [
+      {
+        "background": "assets/bg/E-04.jpg",
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 64.88,
+            "y_mm": 14.2,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.06,
+            "y_mm": 82.53,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 24.64,
+            "y_mm": 84.08,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.5,
+            "y_mm": 55.03,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.45,
+            "y_mm": 69.2,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFF00"
+          }
+        ]
+      },
+      {
+        "background": "assets/bg/E-04.jpg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.02,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.02,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 97.09,
+            "y_mm": 12.35,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.72,
+            "y_mm": 21.3,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 65.32,
+            "y_mm": 14.15,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.5,
+            "y_mm": 82.48,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 25.08,
+            "y_mm": 84.02,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.94,
+            "y_mm": 42.49,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.89,
+            "y_mm": 56.66,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "F-01": {
+    "id": "F-01",
+    "category": "F",
+    "categoryLabel": "ยกแพ็คสุดคุ้ม",
+    "sizeCode": "01",
+    "sizeLabel": "A3 ตั้ง",
+    "page_w_mm": 297.0,
+    "page_h_mm": 420.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/F-01.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": -0.55,
+        "bg_w_mm": 296.99,
+        "bg_h_mm": 420.0,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 106.96,
+            "y_mm": 176.59,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 106.97,
+            "y_mm": 195.6,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 12.98,
+            "y_mm": 198.58,
+            "w_mm": 220.98,
+            "h_mm": 133.35,
+            "fontSizePt": 350.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 106.97,
+            "y_mm": 351.16,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 106.53,
+            "y_mm": 389.84,
+            "w_mm": 173.78,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 244.69,
+            "y_mm": 282.73,
+            "w_mm": 35.98,
+            "h_mm": 16.32,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 236.64,
+            "y_mm": 315.12,
+            "w_mm": 17.37,
+            "h_mm": 17.37,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "F-02": {
+    "id": "F-02",
+    "category": "F",
+    "categoryLabel": "ยกแพ็คสุดคุ้ม",
+    "sizeCode": "02",
+    "sizeLabel": "A3 นอน",
+    "page_w_mm": 420.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/F-02.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.07,
+        "bg_w_mm": 420.0,
+        "bg_h_mm": 296.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 230.85,
+            "y_mm": 61.08,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 230.86,
+            "y_mm": 81.49,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 34.36,
+            "y_mm": 68.81,
+            "w_mm": 302.12,
+            "h_mm": 175.26,
+            "fontSizePt": 460.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 231.23,
+            "y_mm": 263.6,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 59.37,
+            "y_mm": 272.63,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 352.55,
+            "y_mm": 179.65,
+            "w_mm": 52.07,
+            "h_mm": 23.6,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 339.37,
+            "y_mm": 219.43,
+            "w_mm": 25.14,
+            "h_mm": 25.14,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "F-03": {
+    "id": "F-03",
+    "category": "F",
+    "categoryLabel": "ยกแพ็คสุดคุ้ม",
+    "sizeCode": "03",
+    "sizeLabel": "A4 นอน",
+    "page_w_mm": 297.0,
+    "page_h_mm": 210.01,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/F-03.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.09,
+        "bg_w_mm": 297.06,
+        "bg_h_mm": 210.01,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 112.82,
+            "y_mm": 42.72,
+            "w_mm": 173.78,
+            "h_mm": 13.72,
+            "fontSizePt": 36.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 112.83,
+            "y_mm": 58.45,
+            "w_mm": 173.78,
+            "h_mm": 21.34,
+            "fontSizePt": 28.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 56.0,
+            "y_mm": 69.82,
+            "w_mm": 192.4,
+            "h_mm": 91.44,
+            "fontSizePt": 240.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 160.31,
+            "y_mm": 167.89,
+            "w_mm": 126.86,
+            "h_mm": 11.43,
+            "fontSizePt": 30.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 175.78,
+            "y_mm": 190.43,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 257.44,
+            "y_mm": 124.78,
+            "w_mm": 29.85,
+            "h_mm": 13.53,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 250.77,
+            "y_mm": 146.26,
+            "w_mm": 14.41,
+            "h_mm": 14.41,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "F-04": {
+    "id": "F-04",
+    "category": "F",
+    "categoryLabel": "ยกแพ็คสุดคุ้ม",
+    "sizeCode": "04",
+    "sizeLabel": "A5 นอน (2 ใบ/แผ่น)",
+    "page_w_mm": 210.01,
+    "page_h_mm": 297.0,
+    "isPair": true,
+    "units": [
+      {
+        "background": "assets/bg/F-04.jpg",
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 64.88,
+            "y_mm": 14.2,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.06,
+            "y_mm": 82.53,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 24.64,
+            "y_mm": 84.08,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.5,
+            "y_mm": 55.03,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.45,
+            "y_mm": 69.2,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFF00"
+          }
+        ]
+      },
+      {
+        "background": "assets/bg/F-04.jpg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.02,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.02,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 97.09,
+            "y_mm": 12.35,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.72,
+            "y_mm": 21.3,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 65.32,
+            "y_mm": 14.15,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.5,
+            "y_mm": 82.48,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 25.08,
+            "y_mm": 84.02,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.94,
+            "y_mm": 42.49,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.89,
+            "y_mm": 56.66,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "G-01": {
+    "id": "G-01",
+    "category": "G",
+    "categoryLabel": "ซื้อคู่ถูกกว่า",
+    "sizeCode": "01",
+    "sizeLabel": "A3 ตั้ง",
+    "page_w_mm": 297.0,
+    "page_h_mm": 420.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/G-01.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": -0.55,
+        "bg_w_mm": 296.99,
+        "bg_h_mm": 420.0,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 106.96,
+            "y_mm": 176.59,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 106.97,
+            "y_mm": 195.6,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 12.98,
+            "y_mm": 198.58,
+            "w_mm": 220.98,
+            "h_mm": 133.35,
+            "fontSizePt": 350.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 106.97,
+            "y_mm": 351.16,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 106.53,
+            "y_mm": 389.84,
+            "w_mm": 173.78,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 244.69,
+            "y_mm": 282.73,
+            "w_mm": 35.98,
+            "h_mm": 16.32,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 236.64,
+            "y_mm": 315.12,
+            "w_mm": 17.37,
+            "h_mm": 17.37,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "G-02": {
+    "id": "G-02",
+    "category": "G",
+    "categoryLabel": "ซื้อคู่ถูกกว่า",
+    "sizeCode": "02",
+    "sizeLabel": "A3 นอน",
+    "page_w_mm": 420.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/G-02.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.07,
+        "bg_w_mm": 420.0,
+        "bg_h_mm": 296.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 230.85,
+            "y_mm": 61.08,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 230.86,
+            "y_mm": 81.49,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 34.36,
+            "y_mm": 68.81,
+            "w_mm": 302.12,
+            "h_mm": 175.26,
+            "fontSizePt": 460.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 231.23,
+            "y_mm": 263.6,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 59.37,
+            "y_mm": 272.63,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 352.55,
+            "y_mm": 179.65,
+            "w_mm": 52.07,
+            "h_mm": 23.6,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 339.37,
+            "y_mm": 219.43,
+            "w_mm": 25.14,
+            "h_mm": 25.14,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "G-03": {
+    "id": "G-03",
+    "category": "G",
+    "categoryLabel": "ซื้อคู่ถูกกว่า",
+    "sizeCode": "03",
+    "sizeLabel": "A4 นอน",
+    "page_w_mm": 297.0,
+    "page_h_mm": 210.01,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/G-03.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.09,
+        "bg_w_mm": 297.06,
+        "bg_h_mm": 210.01,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 112.82,
+            "y_mm": 42.72,
+            "w_mm": 173.78,
+            "h_mm": 13.72,
+            "fontSizePt": 36.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 112.83,
+            "y_mm": 58.45,
+            "w_mm": 173.78,
+            "h_mm": 21.34,
+            "fontSizePt": 28.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 56.0,
+            "y_mm": 69.82,
+            "w_mm": 192.4,
+            "h_mm": 91.44,
+            "fontSizePt": 240.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 160.31,
+            "y_mm": 167.89,
+            "w_mm": 126.86,
+            "h_mm": 11.43,
+            "fontSizePt": 30.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 175.78,
+            "y_mm": 190.43,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 257.44,
+            "y_mm": 124.78,
+            "w_mm": 29.85,
+            "h_mm": 13.53,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 250.77,
+            "y_mm": 146.26,
+            "w_mm": 14.41,
+            "h_mm": 14.41,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "G-04": {
+    "id": "G-04",
+    "category": "G",
+    "categoryLabel": "ซื้อคู่ถูกกว่า",
+    "sizeCode": "04",
+    "sizeLabel": "A5 นอน (2 ใบ/แผ่น)",
+    "page_w_mm": 210.01,
+    "page_h_mm": 297.0,
+    "isPair": true,
+    "units": [
+      {
+        "background": "assets/bg/G-04.jpg",
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 64.88,
+            "y_mm": 14.2,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.06,
+            "y_mm": 82.53,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 24.64,
+            "y_mm": 84.08,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.5,
+            "y_mm": 55.03,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.45,
+            "y_mm": 69.2,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFF00"
+          }
+        ]
+      },
+      {
+        "background": "assets/bg/G-04.jpg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.02,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.02,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 97.09,
+            "y_mm": 12.35,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.72,
+            "y_mm": 21.3,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 65.32,
+            "y_mm": 14.15,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#FFFF00",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.5,
+            "y_mm": 82.48,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 25.08,
+            "y_mm": 84.02,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.94,
+            "y_mm": 42.49,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#FFFF00"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.89,
+            "y_mm": 56.66,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#FFFF00"
+          }
+        ]
+      }
+    ]
+  },
+  "H-01": {
+    "id": "H-01",
+    "category": "H",
+    "categoryLabel": "ราคาเดียว หมดแล้วหมดเลย",
+    "sizeCode": "01",
+    "sizeLabel": "A3 ตั้ง",
+    "page_w_mm": 297.0,
+    "page_h_mm": 420.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/H-01.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": -0.69,
+        "bg_w_mm": 296.99,
+        "bg_h_mm": 420.0,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 106.96,
+            "y_mm": 176.59,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 106.97,
+            "y_mm": 195.6,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 12.98,
+            "y_mm": 198.58,
+            "w_mm": 220.98,
+            "h_mm": 133.35,
+            "fontSizePt": 350.0,
+            "color": "#EE0000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 106.97,
+            "y_mm": 351.16,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 106.53,
+            "y_mm": 389.84,
+            "w_mm": 173.78,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 244.69,
+            "y_mm": 282.73,
+            "w_mm": 35.98,
+            "h_mm": 16.32,
+            "color": "#EE0000"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 236.64,
+            "y_mm": 315.12,
+            "w_mm": 17.37,
+            "h_mm": 17.37,
+            "color": "#EE0000"
+          }
+        ]
+      }
+    ]
+  },
+  "H-02": {
+    "id": "H-02",
+    "category": "H",
+    "categoryLabel": "ราคาเดียว หมดแล้วหมดเลย",
+    "sizeCode": "02",
+    "sizeLabel": "A3 นอน",
+    "page_w_mm": 420.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/H-02.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.07,
+        "bg_w_mm": 420.0,
+        "bg_h_mm": 296.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 230.85,
+            "y_mm": 61.08,
+            "w_mm": 173.78,
+            "h_mm": 19.81,
+            "fontSizePt": 52.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 230.86,
+            "y_mm": 81.49,
+            "w_mm": 173.78,
+            "h_mm": 30.48,
+            "fontSizePt": 40.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 34.36,
+            "y_mm": 68.81,
+            "w_mm": 302.12,
+            "h_mm": 175.26,
+            "fontSizePt": 460.0,
+            "color": "#EE0000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 231.23,
+            "y_mm": 263.6,
+            "w_mm": 173.78,
+            "h_mm": 17.14,
+            "fontSizePt": 45.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 59.37,
+            "y_mm": 272.63,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 352.55,
+            "y_mm": 179.65,
+            "w_mm": 52.07,
+            "h_mm": 23.6,
+            "color": "#EE0000"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 339.37,
+            "y_mm": 219.43,
+            "w_mm": 25.14,
+            "h_mm": 25.14,
+            "color": "#EE0000"
+          }
+        ]
+      }
+    ]
+  },
+  "H-03": {
+    "id": "H-03",
+    "category": "H",
+    "categoryLabel": "ราคาเดียว หมดแล้วหมดเลย",
+    "sizeCode": "03",
+    "sizeLabel": "A4 นอน",
+    "page_w_mm": 297.0,
+    "page_h_mm": 210.01,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/H-03.jpeg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 0.09,
+        "bg_w_mm": 297.06,
+        "bg_h_mm": 210.01,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 0.0,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 112.82,
+            "y_mm": 42.72,
+            "w_mm": 173.78,
+            "h_mm": 13.72,
+            "fontSizePt": 36.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 112.83,
+            "y_mm": 58.45,
+            "w_mm": 173.78,
+            "h_mm": 21.34,
+            "fontSizePt": 28.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 56.0,
+            "y_mm": 69.82,
+            "w_mm": 192.4,
+            "h_mm": 91.44,
+            "fontSizePt": 240.0,
+            "color": "#EE0000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 160.31,
+            "y_mm": 167.89,
+            "w_mm": 126.86,
+            "h_mm": 11.43,
+            "fontSizePt": 30.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 175.78,
+            "y_mm": 190.43,
+            "w_mm": 111.34,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#FFFF00",
+            "bold": false,
+            "align": "right",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 257.44,
+            "y_mm": 124.78,
+            "w_mm": 29.85,
+            "h_mm": 13.53,
+            "color": "#EE0000"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 250.77,
+            "y_mm": 146.26,
+            "w_mm": 14.41,
+            "h_mm": 14.41,
+            "color": "#EE0000"
+          }
+        ]
+      }
+    ]
+  },
+  "H-04": {
+    "id": "H-04",
+    "category": "H",
+    "categoryLabel": "ราคาเดียว หมดแล้วหมดเลย",
+    "sizeCode": "04",
+    "sizeLabel": "A5 นอน (2 ใบ/แผ่น)",
+    "page_w_mm": 210.01,
+    "page_h_mm": 297.0,
+    "isPair": true,
+    "units": [
+      {
+        "background": "assets/bg/H-04.jpg",
+        "bg_x_mm": 0.02,
+        "bg_y_mm": 32.14,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.02,
+        "offset_y_mm": 32.14,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 96.65,
+            "y_mm": 12.4,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.28,
+            "y_mm": 21.36,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 64.88,
+            "y_mm": 14.2,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#EE0000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.06,
+            "y_mm": 82.53,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 24.64,
+            "y_mm": 84.08,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.5,
+            "y_mm": 55.03,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#EE0000"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.45,
+            "y_mm": 69.2,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#EE0000"
+          }
+        ]
+      },
+      {
+        "background": "assets/bg/H-04.jpg",
+        "bg_x_mm": 0.0,
+        "bg_y_mm": 160.02,
+        "bg_w_mm": 209.99,
+        "bg_h_mm": 99.99,
+        "offset_x_mm": 0.0,
+        "offset_y_mm": 160.02,
+        "fields": [
+          {
+            "role": "productName",
+            "x_mm": 97.09,
+            "y_mm": 12.35,
+            "w_mm": 105.62,
+            "h_mm": 7.62,
+            "fontSizePt": 20.0,
+            "color": "#000000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "ซันไลต์ เลมอน เทอร์โบ",
+            "lines": [
+              "ซันไลต์ เลมอน เทอร์โบ"
+            ]
+          },
+          {
+            "role": "description",
+            "x_mm": 97.72,
+            "y_mm": 21.3,
+            "w_mm": 104.99,
+            "h_mm": 12.19,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ผลิตภัณฑ์น้ำยาล้างจาน3200 มล.",
+            "lines": [
+              "ผลิตภัณฑ์น้ำยาล้างจาน",
+              "3200 มล."
+            ]
+          },
+          {
+            "role": "price",
+            "x_mm": 65.32,
+            "y_mm": 14.15,
+            "w_mm": 113.82,
+            "h_mm": 64.77,
+            "fontSizePt": 170.0,
+            "color": "#EE0000",
+            "bold": true,
+            "align": "right",
+            "sampleText": "199",
+            "lines": [
+              "199"
+            ]
+          },
+          {
+            "role": "oldPrice",
+            "x_mm": 109.5,
+            "y_mm": 82.48,
+            "w_mm": 93.2,
+            "h_mm": 6.1,
+            "fontSizePt": 16.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "right",
+            "sampleText": "ราคาปกติ 299.00 บาท",
+            "lines": [
+              "ราคาปกติ 299.00 บาท"
+            ]
+          },
+          {
+            "role": "dateRange",
+            "x_mm": 25.08,
+            "y_mm": 84.02,
+            "w_mm": 64.35,
+            "h_mm": 4.57,
+            "fontSizePt": 12.0,
+            "color": "#000000",
+            "bold": false,
+            "align": "left",
+            "sampleText": "วันที่ 00/00/00 – 00/00/00",
+            "lines": [
+              "วันที่ 00/00/00 – 00/00/00"
+            ]
+          }
+        ],
+        "statics": [],
+        "decorations": [
+          {
+            "shape": "roundRect",
+            "x_mm": 184.94,
+            "y_mm": 42.49,
+            "w_mm": 18.52,
+            "h_mm": 8.38,
+            "color": "#EE0000"
+          },
+          {
+            "shape": "ellipse",
+            "x_mm": 181.89,
+            "y_mm": 56.66,
+            "w_mm": 8.94,
+            "h_mm": 8.94,
+            "color": "#EE0000"
+          }
+        ]
+      }
+    ]
+  },
+  "S-01": {
+    "id": "S-01",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S1",
+    "sizeLabel": "1 ซื้อ 1 แถม 1",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-01.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
+  },
+  "S-02": {
+    "id": "S-02",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S2",
+    "sizeLabel": "2 ซื้อ 1 แถม 1",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-02.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
+  },
+  "S-03": {
+    "id": "S-03",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S3",
+    "sizeLabel": "ลดล้างสต็อค",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-03.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
+  },
+  "S-04": {
+    "id": "S-04",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S4",
+    "sizeLabel": "แลกซื้อสุดคุ้ม",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-04.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
+  },
+  "S-05": {
+    "id": "S-05",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S5",
+    "sizeLabel": "NEW สินค้าใหม่",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-05.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
+  },
+  "S-06": {
+    "id": "S-06",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S6",
+    "sizeLabel": "สินค้าแนะนำ",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-06.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
+  },
+  "S-07": {
+    "id": "S-07",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S7",
+    "sizeLabel": "โปรโมชั่นสุดปัง",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-07.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
+  },
+  "S-08": {
+    "id": "S-08",
+    "category": "S",
+    "categoryLabel": "Shelf talker 12×12 ซม.",
+    "sizeCode": "S8",
+    "sizeLabel": "ซื้อคู่ถูกกว่า",
+    "page_w_mm": 210.0,
+    "page_h_mm": 297.0,
+    "isPair": false,
+    "units": [
+      {
+        "background": "assets/bg/S-08.jpg",
+        "bg_x_mm": 0,
+        "bg_y_mm": 0,
+        "bg_w_mm": 210.0,
+        "bg_h_mm": 297.0,
+        "offset_x_mm": 0,
+        "offset_y_mm": 0,
+        "fields": [],
+        "statics": [],
+        "decorations": []
+      }
+    ]
   }
 }
