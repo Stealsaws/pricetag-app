@@ -1,3 +1,21 @@
+# วิธีที่แนะนำ (แม่นที่สุด): tools/build_from_docx.py
+
+เครื่องมือนี้เรนเดอร์ไฟล์ .docx ด้วย LibreOffice เป็น PDF แล้วอ่านตำแหน่งจริงของทุกข้อความ/รูป/จุด-เส้นขีด
+จึง**ไม่ต้องวัดด้วยตา**และไม่มีปัญหา margin / 2 ใบต่อแผ่น (ใช้สร้างหมวด B ใหม่ และ E–H ทั้งหมด)
+
+ข้อกำหนดก่อนใช้: ติดตั้ง LibreOffice + `pip install pdfplumber fonttools lxml` และติดตั้งฟอนต์ใน `fonts/` ลงเครื่อง (`~/.fonts` แล้ว `fc-cache -f`)
+
+```bash
+cd tools
+python3 build_from_docx.py --docx ../Sign-I-01.docx --id I-01 \
+  --category I --category-label "ชื่อหมวดใหม่" \
+  --size-code 01 --size-label "A3 ตั้ง" --app-dir .. --merge
+```
+- docx ต้องมีรูปพื้นหลัง 1 ไฟล์ (ถ้าเป็น CMYK JPEG ให้แปลงเป็น sRGB ก่อน เบราว์เซอร์แสดงสีเพี้ยน)
+- ป้ายที่เป็นงานพร้อมพิมพ์ (เช่น Shelf talker) ไม่ต้องมีช่องกรอก: เรนเดอร์ PDF เป็นรูป (`pdftoppm -jpeg -r 220`) ใส่ `assets/bg/` แล้วเพิ่ม template ที่ `fields: []` (ดูตัวอย่าง `S-01` ใน templates.json)
+
+---
+
 # วิธีเพิ่มเทมเพลตใหม่ในอนาคต
 
 แอปนี้ออกแบบให้ **ไม่ต้องแก้โค้ด** เวลาเพิ่มเทมเพลตใหม่ — ทุกอย่าง (หมวด, ขนาด,
