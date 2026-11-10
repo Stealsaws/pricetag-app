@@ -140,7 +140,10 @@ function buildSignSvg(t, v) {
       const wt = measure(str, p.size, p.bold);
       const left = Math.max(b.x + l, xr - measure(p.text, p.size, p.bold));  // where the design's own digits start
       const k = Math.min(1, (Ax - left) / Math.max(1, (Ax - (xr - wt))));
-      if (k < 1) g.setAttribute('transform', `translate(${Ax} ${p.baseline}) scale(${k}) translate(${-Ax} ${-p.baseline})`);
+      if (k < 1) {
+        g.setAttribute('transform', `translate(${Ax} ${p.baseline}) scale(${k}) translate(${-Ax} ${-p.baseline})`);
+        g.dataset.ax = Ax; g.dataset.by = p.baseline; g.dataset.k = k;
+      }
       continue;
     }
     let lines;
@@ -286,12 +289,12 @@ function addCurrentToQueue() {
   updateQueueBadges(); renderQueueList(); showToast('เพิ่มลงคิวพิมพ์แล้ว');
 }
 let toastTimer = null;
-function showToast(message) {
+function showToast(message, ms = 1800) {
   const el = document.getElementById('toast');
   el.textContent = message; el.hidden = false;
   requestAnimationFrame(() => el.classList.add('show'));
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => { el.classList.remove('show'); setTimeout(() => { el.hidden = true; }, 200); }, 1800);
+  toastTimer = setTimeout(() => { el.classList.remove('show'); setTimeout(() => { el.hidden = true; }, 200); }, ms);
 }
 
 /* ---------------------------- printing ---------------------------- */
@@ -310,6 +313,93 @@ function printPages(items) {
   setTimeout(() => window.print(), 50);
 }
 
+/* ---------------------------- save as PDF (works on phones where window.print() does nothing) ----------------------------
+   Each sign is painted onto a canvas (same SVG data, ~216 dpi), turned into a JPEG and written into a small
+   hand-made PDF (one page per sign, page size = the Word page). No external library, works offline.        */
+
+const imgCache = new Map();
+function loadImg(href) {
+  if (!imgCache.has(href)) imgCache.set(href, new Promise((res, rej) => {
+    const im = new Image(); im.onload = () => res(im); im.onerror = () => rej(new Error('image ' + href)); im.src = href;
+  }));
+  return imgCache.get(href);
+}
+async function paintNode(ctx, node) {
+  for (const c of node.children) {
+    const tag = c.tagName.toLowerCase();
+    if (tag === 'rect') { ctx.fillStyle = c.getAttribute('fill'); ctx.fillRect(+c.getAttribute('x'), +c.getAttribute('y'), +c.getAttribute('width'), +c.getAttribute('height')); }
+    else if (tag === 'image') { const im = await loadImg(c.getAttribute('href')); ctx.drawImage(im, +c.getAttribute('x'), +c.getAttribute('y'), +c.getAttribute('width'), +c.getAttribute('height')); }
+    else if (tag === 'ellipse' || tag === 'path') {
+      ctx.fillStyle = c.getAttribute('fill'); ctx.strokeStyle = c.getAttribute('stroke'); ctx.lineWidth = +c.getAttribute('stroke-width') || 0;
+      if (tag === 'ellipse') { ctx.beginPath(); ctx.ellipse(+c.getAttribute('cx'), +c.getAttribute('cy'), +c.getAttribute('rx'), +c.getAttribute('ry'), 0, 0, Math.PI * 2); ctx.fill(); if (ctx.lineWidth) ctx.stroke(); }
+      else { const p = new Path2D(c.getAttribute('d')); ctx.fill(p); if (ctx.lineWidth) { ctx.lineJoin = 'miter'; ctx.stroke(p); } }
+    } else if (tag === 'text') {
+      ctx.fillStyle = c.getAttribute('fill');
+      ctx.font = `${c.getAttribute('font-weight')} ${c.getAttribute('font-size')}px ${FONT}`;
+      ctx.textAlign = c.getAttribute('text-anchor') === 'end' ? 'right' : 'left'; ctx.textBaseline = 'alphabetic';
+      ctx.fillText(c.textContent, +c.getAttribute('x'), +c.getAttribute('y'));
+    } else if (tag === 'g') {
+      ctx.save();
+      if (c.dataset.k) { const ax = +c.dataset.ax, by = +c.dataset.by, k = +c.dataset.k; ctx.translate(ax, by); ctx.scale(k, k); ctx.translate(-ax, -by); }
+      await paintNode(ctx, c); ctx.restore();
+    }
+  }
+}
+async function signToJpeg(t, data) {
+  const svg = buildSignSvg(t, data); const [W, H] = t.page;
+  const scale = Math.min(3.0, 3600 / Math.max(W, H));            // ≈216 dpi, long edge ≤ 3600 px (phone canvas limit)
+  const cv = document.createElement('canvas'); cv.width = Math.round(W * scale); cv.height = Math.round(H * scale);
+  const ctx = cv.getContext('2d'); ctx.scale(scale, scale);
+  await paintNode(ctx, svg);
+  const blob = await new Promise((r) => cv.toBlob(r, 'image/jpeg', 0.93));
+  const bytes = new Uint8Array(await blob.arrayBuffer());
+  cv.width = cv.height = 1;                                       // release memory
+  return { w: W, h: H, iw: Math.round(W * scale), ih: Math.round(H * scale), bytes };
+}
+function makePdf(pages) {
+  const enc = new TextEncoder(); const parts = []; const offs = []; let len = 0;
+  const push = (x) => { const u = typeof x === 'string' ? enc.encode(x) : x; parts.push(u); len += u.length; };
+  const obj = (n, body) => { offs[n] = len; push(`${n} 0 obj\n`); body(); push('\nendobj\n'); };
+  push('%PDF-1.4\n');
+  const kids = pages.map((_, i) => 3 + i * 3);
+  obj(1, () => push('<< /Type /Catalog /Pages 2 0 R >>'));
+  obj(2, () => push(`<< /Type /Pages /Kids [${kids.map((k) => k + ' 0 R').join(' ')}] /Count ${pages.length} >>`));
+  pages.forEach((pg, i) => {
+    const pn = 3 + i * 3, cn = pn + 1, im = pn + 2, w = pg.w.toFixed(2), h = pg.h.toFixed(2);
+    obj(pn, () => push(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${w} ${h}] /Contents ${cn} 0 R /Resources << /XObject << /Im0 ${im} 0 R >> >> >>`));
+    const content = `q ${w} 0 0 ${h} 0 0 cm /Im0 Do Q`;
+    obj(cn, () => push(`<< /Length ${content.length} >>\nstream\n${content}\nendstream`));
+    obj(im, () => { push(`<< /Type /XObject /Subtype /Image /Width ${pg.iw} /Height ${pg.ih} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${pg.bytes.length} >>\nstream\n`); push(pg.bytes); push('\nendstream'); });
+  });
+  const xref = len, n = 3 + pages.length * 3;
+  push(`xref\n0 ${n}\n0000000000 65535 f \n`);
+  for (let i = 1; i < n; i++) push(String(offs[i]).padStart(10, '0') + ' 00000 n \n');
+  push(`trailer\n<< /Size ${n} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`);
+  return new Blob(parts, { type: 'application/pdf' });
+}
+async function savePdf(items) {
+  try {
+    showToast('กำลังสร้าง PDF…', 60000);
+    await fontsReady;
+    const pages = [];
+    for (const item of items) pages.push(await signToJpeg(TEMPLATES[item.templateId], item.data));
+    const blob = makePdf(pages);
+    const d = new Date(); const pad = (x) => String(x).padStart(2, '0');
+    const name = `price-sign-${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}.pdf`;
+    const file = new File([blob], name, { type: 'application/pdf' });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {      // phones: share sheet -> Save to Files, print, LINE...
+      try { await navigator.share({ files: [file], title: 'ป้ายราคา' }); showToast('เรียบร้อย'); return; }
+      catch (e) { if (e && e.name === 'AbortError') { showToast('ยกเลิก'); return; } }
+    }
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+    showToast('บันทึกไฟล์ PDF แล้ว');
+  } catch (err) {
+    console.error(err); showToast('สร้าง PDF ไม่สำเร็จ ลองใหม่อีกครั้ง');
+  }
+}
+
 /* ---------------------------- wiring ---------------------------- */
 
 function init() {
@@ -321,6 +411,8 @@ function init() {
     onTemplateChange();
   });
   document.getElementById('btnAddQueue').onclick = addCurrentToQueue;
+  document.getElementById('btnSavePdf').onclick = () => savePdf([{ templateId: currentTemplateId(), data: { ...state.data } }]);
+  document.getElementById('btnSaveQueuePdf').onclick = () => { if (!queue.length) { alert('คิวพิมพ์ยังไม่มีป้ายเลย'); return; } savePdf(queue); };
   document.getElementById('btnPrintNow').onclick = () => printPages([{ templateId: currentTemplateId(), data: { ...state.data } }]);
   document.getElementById('btnPrintQueue').onclick = () => { if (!queue.length) { alert('คิวพิมพ์ยังไม่มีป้ายเลย'); return; } printPages(queue); };
   document.getElementById('btnClearQueue').onclick = () => { queue = []; renderQueueList(); updateQueueBadges(); };

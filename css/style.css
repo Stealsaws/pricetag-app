@@ -185,7 +185,7 @@ body{
   padding:14px 24px; display:flex; gap:12px; justify-content:center;
   box-shadow: 0 -4px 16px rgba(16,24,40,0.06);
 }
-.action-bar .btn{ min-width:200px; }
+.action-bar .btn{ min-width:170px; }
 
 /* ============ Queue drawer ============ */
 .drawer{
@@ -242,7 +242,9 @@ body{
   .panel-controls.pane-active{ display:block; }
   .panel-preview.pane-active{ display:flex; }
   .action-bar{ padding:12px 14px; }
-  .action-bar .btn{ min-width:0; flex:1; padding:12px 8px; font-size:13px; }
+  .action-bar .btn{ min-width:0; flex:1; padding:12px 6px; font-size:13px; gap:5px; }
+  .lbl-long{ display:none; }
+  .drawer-actions{ flex-wrap:wrap; }
 }
 
 /* ============ Print ============ */

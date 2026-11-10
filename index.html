@@ -76,11 +76,15 @@
   <div class="action-bar no-print">
     <button id="btnAddQueue" class="btn btn-primary">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
-      เพิ่มลงคิวพิมพ์
+      เพิ่มลงคิว<span class="lbl-long">พิมพ์</span>
+    </button>
+    <button id="btnSavePdf" class="btn btn-primary btn-pdf">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+      บันทึก PDF
     </button>
     <button id="btnPrintNow" class="btn btn-outline">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-      พิมพ์ป้ายนี้ทันที
+      พิมพ์<span class="lbl-long">ป้ายนี้ทันที</span>
     </button>
   </div>
 
@@ -95,7 +99,8 @@
     <div id="queueList" class="queue-list"></div>
     <div class="drawer-actions">
       <button id="btnClearQueue" class="btn btn-ghost">ล้างคิวทั้งหมด</button>
-      <button id="btnPrintQueue" class="btn btn-primary">พิมพ์ทั้งหมด</button>
+      <button id="btnSaveQueuePdf" class="btn btn-primary">บันทึก PDF</button>
+      <button id="btnPrintQueue" class="btn btn-outline">พิมพ์ทั้งหมด</button>
     </div>
   </div>
 
