@@ -17,7 +17,7 @@ const CATEGORY_SUB_LABELS = {
 };
 
 let TEMPLATES = {};
-let state = { category: 'A', size: '01', data: null, touched: {} };
+let state = { category: 'A', size: '01', data: null, data2: null, linked: true, editing: 0, touched: {} };
 let queue = []; // [{ templateId, data }]
 
 /* ---------------------------- category / size discovery ---------------------------- */
@@ -62,6 +62,12 @@ function newData(t) {
   return { name: 'ชื่อสินค้า', d1: 'รายละเอียดสินค้า', d2: '', price: '199', oldPrice: '299.00',
            dateStart: '', dateEnd: '', ...designDefaults(t) };
 }
+function curData() { return (state.linked || state.editing === 0) ? state.data : state.data2; }
+function setField(key, val) {
+  state.touched[key] = true;
+  if (state.linked || !isPairTemplate(currentTemplate())) { state.data[key] = val; state.data2[key] = val; }
+  else curData()[key] = val;
+}
 function withDesignDefaults(data, t) {   // keep what the user typed; take only/foot from this design unless edited
   const d = designDefaults(t);
   const out = { ...data };
@@ -96,7 +102,22 @@ function textEl(parent, str, x, y, size, bold, color, anchor) {
   e.textContent = str; return e;
 }
 
-function buildSignSvg(t, v) {
+// Which sign on the sheet a point belongs to (2-up sheets have two background images, top and bottom).
+function copyIndexAt(t, cy) {
+  if (t.images.length < 2) return 0;
+  const order = t.images.map((im, i) => i).sort((a, b) => t.images[a].y - t.images[b].y);
+  let best = 0, bd = 1e9;
+  order.forEach((ii, pos) => {
+    const im = t.images[ii]; const d = cy < im.y ? im.y - cy : (cy > im.y + im.h ? cy - (im.y + im.h) : 0);
+    if (d < bd) { bd = d; best = pos; }
+  });
+  return best;
+}
+const isPairTemplate = (t) => !!t && t.images.length > 1 && t.boxes.length > 0;
+
+// v = data of the (first/top) sign, v2 = data of the second sign on 2-up sheets (defaults to v)
+function buildSignSvg(t, v, v2, opts) {
+  const vs = [v, v2 || v];
   const [W, H] = t.page;
   const svg = document.createElementNS(SVG_NS, 'svg');
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
@@ -131,9 +152,10 @@ function buildSignSvg(t, v) {
       continue;
     }
     const b = it.b; const [l, , r] = b.ins;
+    const V = vs[copyIndexAt(t, b.y + b.h / 2)];
     if (b.role === 'price') {
       const g = groups.get(b); svg.appendChild(g);
-      const p = b.paras[0]; const str = fmtPrice(v.price) || '0';
+      const p = b.paras[0]; const str = fmtPrice(V.price) || '0';
       const xr = b.x + b.w - r;
       textEl(g, str, xr, p.baseline, p.size, p.bold, p.color, 'end');
       let Ax = xr; for (const s of t.shapes) if (owner.get(s) === b) Ax = Math.max(Ax, s.x + s.w + s.stroke_w / 2);
@@ -147,12 +169,12 @@ function buildSignSvg(t, v) {
       continue;
     }
     let lines;
-    if (b.role === 'name') lines = [v.name];
-    else if (b.role === 'desc') lines = [v.d1, v.d2];
-    else if (b.role === 'normal') lines = [b.paras[0].text.replace(/[\d,.]+/, fmtMoney(v.oldPrice))];
-    else if (b.role === 'date') lines = [b.paras[0].text.replace(/\d\d\/\d\d\/\d\d(\D+)\d\d\/\d\d\/\d\d/, thaiDate(v.dateStart) + '$1' + thaiDate(v.dateEnd))];
-    else if (b.role === 'only') lines = [v.only];
-    else if (b.role === 'foot') lines = [v.foot];
+    if (b.role === 'name') lines = [V.name];
+    else if (b.role === 'desc') lines = [V.d1, V.d2];
+    else if (b.role === 'normal') lines = [b.paras[0].text.replace(/[\d,.]+/, fmtMoney(V.oldPrice))];
+    else if (b.role === 'date') lines = [b.paras[0].text.replace(/\d\d\/\d\d\/\d\d(\D+)\d\d\/\d\d\/\d\d/, thaiDate(V.dateStart) + '$1' + thaiDate(V.dateEnd))];
+    else if (b.role === 'only') lines = [V.only];
+    else if (b.role === 'foot') lines = [V.foot];
     else lines = b.paras.map((p) => p.text);
     b.paras.forEach((p, i) => {
       const str = (lines[i] ?? p.text).replace(/\s+$/, ''); if (!str) return;
@@ -161,6 +183,12 @@ function buildSignSvg(t, v) {
       if (w > maxW && w > 0) size = size * Math.max(0.35, maxW / w);      // long text shrinks to fit the original box
       textEl(svg, str, x, p.baseline, size, p.bold, p.color, right ? 'end' : 'start');
     });
+  }
+  if (opts && opts.highlight != null && t.images.length > 1) {   // preview only: outline the sign being edited
+    const order = t.images.map((im, i) => i).sort((x, y) => t.images[x].y - t.images[y].y);
+    const im = t.images[order[opts.highlight]];
+    mk('rect', { x: im.x + 2, y: Math.max(2, im.y + 2), width: im.w - 4, height: im.h - 4, fill: 'none', stroke: '#f7941d',
+      'stroke-width': 5, 'stroke-dasharray': '16 10', 'pointer-events': 'none' }, svg);
   }
   return svg;
 }
@@ -217,7 +245,7 @@ function bareInput(key, placeholder, value, type = 'text', fmt = null) {
   if (key === 'price') input.inputMode = 'numeric';
   input.oninput = () => {
     if (fmt) { input.value = fmt(input.value); }
-    state.data[key] = input.value; state.touched[key] = true; renderPreview();
+    setField(key, input.value); renderPreview();
   };
   return input;
 }
@@ -229,8 +257,31 @@ function row(label, ...inputs) {
   return r;
 }
 function buildForm() {
-  const t = currentTemplate(); const d = state.data;
+  const t = currentTemplate(); const d = curData();
   const form = document.getElementById('signForm'); form.innerHTML = '';
+  if (isPairTemplate(t)) {                       // 2 signs per sheet: edit both together or one by one
+    const box = document.createElement('div'); box.className = 'pair-box';
+    const lab = document.createElement('label'); lab.className = 'pair-check';
+    const cb = document.createElement('input'); cb.type = 'checkbox'; cb.checked = state.linked;
+    cb.onchange = () => {
+      state.linked = cb.checked;
+      if (state.linked) { state.data2 = { ...state.data }; state.editing = 0; showToast('ใช้ข้อมูลของใบบนกับทั้ง 2 ใบ'); }
+      buildForm(); renderPreview();
+    };
+    lab.append(cb, document.createTextNode(' ข้อมูลเหมือนกันทั้ง 2 ใบ'));
+    box.appendChild(lab);
+    if (!state.linked) {
+      const seg = document.createElement('div'); seg.className = 'seg';
+      ['ใบบน', 'ใบล่าง'].forEach((txt, i) => {
+        const bt = document.createElement('button'); bt.type = 'button'; bt.textContent = txt; bt.dataset.copy = i;
+        bt.className = 'seg-btn' + (state.editing === i ? ' active' : '');
+        bt.onclick = () => { state.editing = i; buildForm(); renderPreview(); };
+        seg.appendChild(bt);
+      });
+      box.appendChild(seg);
+    }
+    form.appendChild(box);
+  }
   if (hasRole(t, 'name')) form.appendChild(row('ชื่อสินค้า', bareInput('name', '', d.name)));
   if (hasRole(t, 'desc')) form.appendChild(row('รายละเอียดสินค้า', bareInput('d1', 'เช่น ผลิตภัณฑ์น้ำยาล้างจาน', d.d1), bareInput('d2', 'เช่น 3200 มล.', d.d2)));
   if (hasRole(t, 'price')) form.appendChild(row('ราคาใหม่ (บาท) — ใส่ , ให้อัตโนมัติ', bareInput('price', '', fmtPrice(d.price), 'text', fmtPrice)));
@@ -238,7 +289,7 @@ function buildForm() {
   if (hasRole(t, 'date')) form.appendChild(row('ช่วงวันที่โปรโมชั่น', bareInput('dateStart', '', d.dateStart, 'date'), bareInput('dateEnd', '', d.dateEnd, 'date')));
   if (hasRole(t, 'only')) form.appendChild(row('ข้อความ "เพียง"', bareInput('only', '', d.only)));
   if (hasRole(t, 'foot')) form.appendChild(row('หมายเหตุท้ายป้าย', bareInput('foot', '', d.foot)));
-  if (!form.children.length) {
+  if (!form.querySelector('.field-row')) {
     const note = document.createElement('div'); note.className = 'static-note';
     note.textContent = 'ป้ายแบบนี้เป็นงานพร้อมพิมพ์ ไม่มีช่องให้กรอก — กด "พิมพ์ป้ายนี้ทันที" หรือเพิ่มลงคิวได้เลย (1 แผ่น A4 ได้ 2 ใบ)';
     form.appendChild(note);
@@ -251,7 +302,7 @@ function renderPreview() {
   const t = currentTemplate(); if (!t) return;
   const stage = document.getElementById('previewStage');
   stage.innerHTML = '';
-  const svg = buildSignSvg(t, state.data);
+  const svg = buildSignSvg(t, state.data, state.data2, { highlight: (isPairTemplate(t) && !state.linked) ? state.editing : null });
   svg.style.maxWidth = (t.page[0] * PT_PX) + 'px';
   stage.appendChild(svg);
   document.getElementById('previewMeta').textContent = `— ${t.categoryLabel} / ${t.sizeLabel}`;
@@ -260,6 +311,8 @@ function renderPreview() {
 function onTemplateChange() {
   const t = currentTemplate();
   state.data = withDesignDefaults(state.data || newData(t), t);
+  state.data2 = withDesignDefaults(state.data2 || { ...state.data }, t);
+  if (!isPairTemplate(t)) state.editing = 0;
   renderCategoryPicker(); renderSizePicker(); buildForm(); renderPreview();
 }
 
@@ -276,7 +329,8 @@ function renderQueueList() {
     const t = TEMPLATES[item.templateId];
     const r = document.createElement('div'); r.className = 'queue-item';
     const info = document.createElement('div'); info.className = 'queue-item-info';
-    const b = document.createElement('b'); b.textContent = item.data.name || '(ไม่มีชื่อ)';
+    const b = document.createElement('b');
+    b.textContent = (item.data.name || '(ไม่มีชื่อ)') + (isPairTemplate(t) && item.data2 && item.data2.name !== item.data.name ? ' / ' + (item.data2.name || '(ไม่มีชื่อ)') : '');
     const sp = document.createElement('span'); sp.textContent = `${t.categoryLabel} · ${t.sizeLabel}`;
     info.append(b, sp); r.appendChild(info);
     const del = document.createElement('button'); del.className = 'btn btn-ghost btn-sm btn-danger-text'; del.textContent = 'ลบ';
@@ -285,7 +339,7 @@ function renderQueueList() {
   });
 }
 function addCurrentToQueue() {
-  queue.push({ templateId: currentTemplateId(), data: { ...state.data } });
+  queue.push({ templateId: currentTemplateId(), data: { ...state.data }, data2: { ...state.data2 } });
   updateQueueBadges(); renderQueueList(); showToast('เพิ่มลงคิวพิมพ์แล้ว');
 }
 let toastTimer = null;
@@ -304,7 +358,7 @@ function printPages(items) {
   items.forEach((item) => {
     const t = TEMPLATES[item.templateId];
     const wrap = document.createElement('div'); wrap.className = 'print-page';
-    wrap.appendChild(buildSignSvg(t, item.data)); area.appendChild(wrap);
+    wrap.appendChild(buildSignSvg(t, item.data, item.data2)); area.appendChild(wrap);
   });
   let tag = document.getElementById('dynamicPageSize');
   if (!tag) { tag = document.createElement('style'); tag.id = 'dynamicPageSize'; document.head.appendChild(tag); }
@@ -345,8 +399,8 @@ async function paintNode(ctx, node) {
     }
   }
 }
-async function signToJpeg(t, data) {
-  const svg = buildSignSvg(t, data); const [W, H] = t.page;
+async function signToJpeg(t, data, data2) {
+  const svg = buildSignSvg(t, data, data2); const [W, H] = t.page;
   const scale = Math.min(3.0, 3600 / Math.max(W, H));            // ≈216 dpi, long edge ≤ 3600 px (phone canvas limit)
   const cv = document.createElement('canvas'); cv.width = Math.round(W * scale); cv.height = Math.round(H * scale);
   const ctx = cv.getContext('2d'); ctx.scale(scale, scale);
@@ -382,7 +436,7 @@ async function savePdf(items) {
     showToast('กำลังสร้าง PDF…', 60000);
     await fontsReady;
     const pages = [];
-    for (const item of items) pages.push(await signToJpeg(TEMPLATES[item.templateId], item.data));
+    for (const item of items) pages.push(await signToJpeg(TEMPLATES[item.templateId], item.data, item.data2));
     const blob = makePdf(pages);
     const d = new Date(); const pad = (x) => String(x).padStart(2, '0');
     const name = `price-sign-${d.getFullYear()}${pad(d.getMonth() + 1)}${pad(d.getDate())}-${pad(d.getHours())}${pad(d.getMinutes())}.pdf`;
@@ -407,13 +461,13 @@ function init() {
     TEMPLATES = json;
     const cats = listCategories();
     if (!currentTemplate() && cats.length) { state.category = cats[0].code; ensureValidSize(); }
-    state.data = newData(currentTemplate());
+    state.data = newData(currentTemplate()); state.data2 = { ...state.data };
     onTemplateChange();
   });
   document.getElementById('btnAddQueue').onclick = addCurrentToQueue;
-  document.getElementById('btnSavePdf').onclick = () => savePdf([{ templateId: currentTemplateId(), data: { ...state.data } }]);
+  document.getElementById('btnSavePdf').onclick = () => savePdf([{ templateId: currentTemplateId(), data: { ...state.data }, data2: { ...state.data2 } }]);
   document.getElementById('btnSaveQueuePdf').onclick = () => { if (!queue.length) { alert('คิวพิมพ์ยังไม่มีป้ายเลย'); return; } savePdf(queue); };
-  document.getElementById('btnPrintNow').onclick = () => printPages([{ templateId: currentTemplateId(), data: { ...state.data } }]);
+  document.getElementById('btnPrintNow').onclick = () => printPages([{ templateId: currentTemplateId(), data: { ...state.data }, data2: { ...state.data2 } }]);
   document.getElementById('btnPrintQueue').onclick = () => { if (!queue.length) { alert('คิวพิมพ์ยังไม่มีป้ายเลย'); return; } printPages(queue); };
   document.getElementById('btnClearQueue').onclick = () => { queue = []; renderQueueList(); updateQueueBadges(); };
   document.getElementById('btnShowQueue').onclick = () => { document.getElementById('queueDrawer').hidden = false; };

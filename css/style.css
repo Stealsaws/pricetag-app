@@ -157,6 +157,14 @@ body{
   line-height:1.5;
 }
 
+/* 2-up sheets: edit both signs together or separately */
+.pair-box{ background:#fff8ee; border:1.5px solid #f7c98b; border-radius:12px; padding:11px 13px; display:flex; flex-direction:column; gap:10px; }
+.pair-check{ font-size:13.5px; font-weight:700; display:flex; align-items:center; gap:8px; cursor:pointer; }
+.pair-check input{ width:18px; height:18px; accent-color:var(--riki-orange); }
+.seg{ display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.seg-btn{ font-family:inherit; font-size:13.5px; font-weight:700; padding:9px 8px; border-radius:9px; border:1.5px solid var(--border); background:#fff; cursor:pointer; }
+.seg-btn.active{ border-color:var(--riki-orange); background:var(--riki-orange-light); color:var(--riki-orange-dark); }
+
 /* preview */
 .panel-preview{ display:flex; flex-direction:column; }
 .preview-meta{ font-weight:500; color:var(--text-muted); font-size:12.5px; }
